@@ -3,12 +3,13 @@ import { postDocument, putDocument, getOwners } from '../../services/documentsSe
 import Loading from '../loading';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const DocumentForm = () => {
     const [loading, setLoading] = useState(true);
     const [owners, setOwners] = useState([]);
     const params = useParams();
+    const navigate = useNavigate();
 
     const documentId = params.id;
 
@@ -33,6 +34,7 @@ const DocumentForm = () => {
             response = await postDocument(formData);
         }
         if(!!response) setLoading(false);
+        navigate('/documents');
     };
 
     useMemo(() => {

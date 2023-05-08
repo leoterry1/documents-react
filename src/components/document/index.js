@@ -58,7 +58,7 @@ const Document = ({ documentId, onHide }) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button href='/documents/:id/edit' variant="primary">Editar</Button>
+                    <Button href={`/documents/${document._id}/edit`} variant="primary">Editar</Button>
                     <Button onClick={onDelete} variant="secondary">Eliminar</Button>
                 </Modal.Footer>
                     </div>
