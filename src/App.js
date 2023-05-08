@@ -13,14 +13,15 @@ function App() {
     <div className='container'>
       <Navigation/>
       <BrowserRouter>
-          <Routes>
-          <Route path="/documents" element={<Documents />}/>
-          <Route path='/documents/new' element={<DocumentForm/>}/>
-          <Route path='/documents/:id/edit' element={<DocumentForm/>}/>
-          <Route path='/documents/:id' element={<DocumentForm/>}/>
-          <Route path='/documents/search' element={<SearchForm/>}/>
-          <Route path='/documents/:id/asocciate-users' element={<AssociateUsersForm/>}/>
-          </Routes>
+        <Routes>
+            <Route path='/' element={App}/>
+            <Route path="/documents" element={<Documents />}/>
+            <Route path='/documents/new' element={<DocumentForm/>}/>
+            <Route path='/documents/:id/edit' element={<DocumentForm/>}/>
+            <Route path='/documents/:id' element={<DocumentForm/>}/>
+            <Route path='/documents/search' element={<SearchForm/>}/>
+            <Route path='/documents/:id/asocciate-users' element={<AssociateUsersForm/>}/>
+      </Routes>
       </BrowserRouter>
     </div>
 
