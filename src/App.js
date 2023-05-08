@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navigation from './components/navigation';
+import Documents from './components/documents';
+import DocumentForm from './components/documentForm.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import SearchForm from './components/searchForm';
+import AssociateUsersForm from './components/associateUsersForm';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Navigation/>
+      <BrowserRouter>
+          <Routes>
+          <Route path="/documents" element={<Documents />}/>
+          <Route path='/documents/new' element={<DocumentForm/>}/>
+          <Route path='/documents/:id/edit' element={<DocumentForm/>}/>
+          <Route path='/documents/:id' element={<DocumentForm/>}/>
+          <Route path='/documents/search' element={<SearchForm/>}/>
+          <Route path='/documents/:id/asocciate-users' element={<AssociateUsersForm/>}/>
+          </Routes>
+      </BrowserRouter>
     </div>
+
   );
 }
 
