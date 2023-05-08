@@ -15,11 +15,11 @@ function App() {
         <Navigation/>
         <Routes>
             <Route path="/" element={<Documents />}/>
-            <Route path='/documents/new' element={<DocumentForm/>}/>
-            <Route path='/documents/:id/edit' element={<DocumentForm/>}/>
-            <Route path='/documents/:id' element={<DocumentForm/>}/>
-            <Route path='/documents/search' element={<SearchForm/>}/>
-            <Route path='/documents/:id/asocciate-users' element={<AssociateUsersForm/>}/>
+            <Route path='documents/new' element={<DocumentForm/>}/>
+            <Route path='documents/:id/edit' element={<DocumentForm/>}/>
+            <Route path='documents/:id' element={<DocumentForm/>}/>
+            <Route path='documents/search' element={<SearchForm/>}/>
+            <Route path='documents/:id/asocciate-users' element={<AssociateUsersForm/>}/>
       </Routes>
       </BrowserRouter>
     </div>
