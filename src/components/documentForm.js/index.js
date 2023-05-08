@@ -34,7 +34,7 @@ const DocumentForm = () => {
             response = await postDocument(formData);
         }
         if(!!response) setLoading(false);
-        navigate('/documents');
+        navigate('/');
     };
 
     useMemo(() => {

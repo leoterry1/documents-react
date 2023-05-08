@@ -14,8 +14,7 @@ function App() {
       <BrowserRouter>
         <Navigation/>
         <Routes>
-            <Route path='/' element={App}/>
-            <Route path="/documents" element={<Documents />}/>
+            <Route path="/" element={<Documents />}/>
             <Route path='/documents/new' element={<DocumentForm/>}/>
             <Route path='/documents/:id/edit' element={<DocumentForm/>}/>
             <Route path='/documents/:id' element={<DocumentForm/>}/>

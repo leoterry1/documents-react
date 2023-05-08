@@ -4,7 +4,7 @@ export const SCREENS = [
         routes: [
             {
                 title: 'Listado',
-                url: '/documents'
+                url: '/'
             },
             {
                 title: 'Crear',
