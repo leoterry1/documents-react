@@ -11,8 +11,8 @@ import AssociateUsersForm from './components/associateUsersForm';
 function App() {
   return (
     <div className='container'>
-      <Navigation/>
       <BrowserRouter>
+        <Navigation/>
         <Routes>
             <Route path='/' element={App}/>
             <Route path="/documents" element={<Documents />}/>
